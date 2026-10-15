@@ -22,4 +22,12 @@ public class String1 {
         }
         return false;
     }
+
+    public String nTwice(String str, int n) {
+        int tamanio = str.length();
+        String inicio = str.substring(0,n);
+        String fin = str.substring(tamanio-n,tamanio);
+        return inicio+fin;
+    }
+
 }
