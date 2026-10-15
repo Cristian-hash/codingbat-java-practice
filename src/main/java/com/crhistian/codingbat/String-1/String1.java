@@ -29,5 +29,15 @@ public class String1 {
         String fin = str.substring(tamanio-n,tamanio);
         return inicio+fin;
     }
+    public String twoChar(String str, int index) {
+        int tamanio = str.length();
+        if ( 0<index && index<tamanio-1 ){
+            return str.substring(index,index+2);
+        }else if( index <= tamanio ){
+            return str.substring(0,2);
+        }else{
+            return str.substring(0,2);
+        }
+    }
 
 }
