@@ -49,4 +49,27 @@ public class String1 {
         }
     }
 
+    public boolean hasBad(String str) {
+        int tamanio = str.length();
+        if(tamanio <3){
+            return false;
+
+        }else if(tamanio==3){
+            if(str =="bad" ){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            String cadenaUno = str.substring(0,3);
+            String cadenaDos = str.substring(1,4);
+
+            if((cadenaUno.equals("bad") || cadenaDos.equals("bad"))){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+
 }
