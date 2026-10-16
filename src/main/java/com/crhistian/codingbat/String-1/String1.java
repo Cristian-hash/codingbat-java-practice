@@ -39,5 +39,14 @@ public class String1 {
             return str.substring(0,2);
         }
     }
+    public String middleThree(String str) {
+        int tamanio = str.length();
+        int inicio= (tamanio/2)-1;
+        if(tamanio > 2){
+            return str.substring(inicio,inicio+3);
+        }else{
+            return str;
+        }
+    }
 
 }
