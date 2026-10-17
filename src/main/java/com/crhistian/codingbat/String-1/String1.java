@@ -71,5 +71,24 @@ public class String1 {
             }
         }
     }
+    public String lastChars(String a, String b) {
+        int tamanioPrimera = a.length();
+        int tamanioSegunda = b.length();
+        String primera ="";
+        String segunda ="";
+        if ( tamanioPrimera == 0  ){
+            primera = "@";
+        }else{
+            primera= a.substring(0,1);
+        }
+
+        if ( tamanioSegunda == 0  ){
+            segunda = "@";
+        }else{
+            segunda= b.substring(tamanioSegunda-1);
+        }
+
+        return primera + segunda;
+    }
 
 }
