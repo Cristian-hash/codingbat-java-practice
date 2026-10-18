@@ -91,4 +91,23 @@ public class String1 {
         return primera + segunda;
     }
 
+    public String conCat(String a, String b) {
+        int tamanioA=a.length();
+        int tamanioB=b.length();
+
+        if(tamanioA>0&&tamanioB>0){
+            String ultimaLetra=a.substring(tamanioA-1);
+            String primeraLetra=b.substring(0,1);
+            if(ultimaLetra.equals(primeraLetra)){
+                return a+(b.substring(1,tamanioB));
+            }else{
+                return a+b;
+            }
+        }else{
+            return a+b;
+        }
+
+    }
+
+
 }
