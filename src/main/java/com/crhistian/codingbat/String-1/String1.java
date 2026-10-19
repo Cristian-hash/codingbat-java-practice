@@ -123,6 +123,41 @@ public class String1 {
         }
     }
 
+    public String seeColor(String str) {
+
+        int tamanio = str.length();
+
+        if( str.startsWith( "red" )  ){
+            return "red";
+        }else if( str.startsWith("blue")){
+            return "blue";
+        }else {
+            return "";
+        }
+    }
+
+    /*
+      int tamanio = str.length();
+      if( tamanio < 4  ){
+       return "";
+      }else if( str.substring(0,3).equals("red") || str.substring(0,4).equals("blue") ){
+
+        if(str.substring(0,3).equals("red")){
+          return "red";
+        }else{
+        return "blue";
+        }
+      }else{
+
+       return "";
+
+      }
+
+
+    */
+
+
+
 
 
 }
