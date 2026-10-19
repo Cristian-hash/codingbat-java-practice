@@ -109,5 +109,20 @@ public class String1 {
 
     }
 
+    public String lastTwo(String str) {
+        int tamanio = str.length();
+        if (tamanio<2){
+            return str;
+        }else{
+            String inicio = str.substring(0,tamanio-2);
+            String primera = str.substring(tamanio-1);
+            String segunda = str.substring(tamanio-2,tamanio-1);
+            String palabra;
+            palabra = inicio+primera+segunda;
+            return palabra;
+        }
+    }
+
+
 
 }
