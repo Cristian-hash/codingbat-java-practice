@@ -156,6 +156,22 @@ public class String1 {
 
     */
 
+    public boolean frontAgain(String str) {
+        int tamanio = str.length();
+        if(tamanio<2){
+            return false;
+        }else{
+
+            String primeras = str.substring(0,2);
+            String ultimas = str.substring(tamanio-2,tamanio);
+
+            if(primeras.equals(ultimas)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
 
 
 
