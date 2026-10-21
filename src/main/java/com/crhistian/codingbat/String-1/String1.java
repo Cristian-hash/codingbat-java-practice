@@ -173,6 +173,27 @@ public class String1 {
         }
     }
 
+    public String minCat(String a, String b) {
+        int tamanioA = a.length();
+        int tamanioB = b.length();
+
+        if( tamanioA < tamanioB ){
+
+            String cadenaUno = a.substring(0);
+            String cadenaDos = b.substring(tamanioB-tamanioA);
+
+            return cadenaUno+cadenaDos;
+
+        }else{
+            String cadenaUno = a.substring(tamanioA-tamanioB);
+            String cadenaDos = b.substring(0);
+
+            return cadenaUno+cadenaDos;
+
+        }
+    }
+
+
 
 
 
