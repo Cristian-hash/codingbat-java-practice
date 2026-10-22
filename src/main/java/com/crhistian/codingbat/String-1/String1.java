@@ -193,8 +193,13 @@ public class String1 {
         }
     }
 
-
-
-
-
+    public String extraFront(String str) {
+        int tamanio = str.length();
+        if(tamanio < 2){
+            return str+str+str;
+        }else{
+            String palabra = str.substring(0,2);
+            return palabra+palabra+palabra;
+        }
+    }
 }
