@@ -202,4 +202,21 @@ public class String1 {
             return palabra+palabra+palabra;
         }
     }
+    public String without2(String str) {
+        int tamanio = str.length();
+        if( tamanio < 2 ){
+            return str;
+        }else{
+
+            String inicio = str.substring(0,2);
+            String fin    = str.substring(tamanio-2,tamanio);
+
+            if( inicio.equals( fin ) ){
+                return  str.substring(2) ;
+            }else{
+                return str;
+            }
+        }
+    }
+
 }
