@@ -219,4 +219,21 @@ public class String1 {
         }
     }
 
+    public String deFront(String str) {
+        String primera = str.substring(0,1);
+        String segunda = str.substring(1,2);
+        if(primera.equals("a")||segunda.equals("b")){
+
+            if( primera.equals("a") && segunda.equals("b") ){
+                return "ab"+str.substring(2);
+            }else if(primera.equals("a")){
+                return "a"+str.substring(2);
+            }else{
+                return "b"+str.substring(2);
+            }
+        } else {
+            return str.substring(2);
+        }
+    }
+
 }
