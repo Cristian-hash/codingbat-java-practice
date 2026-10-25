@@ -236,4 +236,23 @@ public class String1 {
         }
     }
 
+    public String startWord(String str, String word) {
+
+        int tamanioWord = word.length();
+        int tamanioStr  = str.length();
+
+        if(tamanioStr>=tamanioWord){
+
+            if(  word.equals( str.substring (0,tamanioWord) )  ){
+                return str.substring( 0, tamanioWord );
+            }else if( word.substring( 1, tamanioWord ) .equals ( str.substring( 1,tamanioWord ) ) ){
+                return str.substring( 0, tamanioWord );
+            }else{
+                return "";
+            }
+        }else{
+            return "";
+        }
+    }
+
 }
