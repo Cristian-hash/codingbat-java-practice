@@ -255,4 +255,52 @@ public class String1 {
         }
     }
 
+
+    public String withoutX(String str) {
+        int tamanio = str.length();
+
+
+        if(tamanio<=1){
+            if(str.equals("x")){
+                return "";
+            }else{
+                return str;
+            }
+        }else{
+
+
+            String inicio = str.substring(0, 1);
+            String fin = str.substring(tamanio - 1);
+            String palabra = str;
+
+            if (inicio.equals("x") && fin.equals("x")) {
+                // Limpiar inicio y fin
+                return str.substring(1, tamanio - 1);
+
+            } else if (inicio.equals("x") || fin.equals("x")) {
+
+                if (inicio.equals("x")) {
+                    palabra = str.substring(1);
+                } else {
+                    palabra = str;
+                }
+
+                String palabraFinal = palabra;
+
+                if (fin.equals("x")) {
+                    palabraFinal = palabra.substring(0, tamanio - 1);
+                } else {
+                    palabraFinal = palabra;
+                }
+
+                return palabraFinal;
+
+            } else {
+                return str;
+            }
+        }
+
+    }
+
+
 }
