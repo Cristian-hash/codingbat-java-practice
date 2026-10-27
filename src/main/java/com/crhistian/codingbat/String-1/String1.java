@@ -302,5 +302,41 @@ public class String1 {
 
     }
 
+    public String withoutX2(String str) {
+
+        int tamanio = str.length();
+
+        if( tamanio > 1 ){
+            String pri = str.substring(0,1);
+            String seg = str.substring(1,2);
+
+            if( pri.equals("x") && seg.equals("x") ){
+                return str.substring(2);
+            }else if( pri.equals("x") || seg.equals("x") ){
+
+                if( pri.equals("x") ){
+                    return str.substring(1);
+                }else{
+                    return str.charAt(0)+str.substring(2);
+                }
+
+            }else{
+
+                return str;
+
+            }
+
+        }else{
+            if(tamanio==1){
+                if(str.equals("x")){
+                    return "";
+                }else{
+                    return str;
+                }
+            }else{
+                return "";
+            }
+        }
+    }
 
 }
