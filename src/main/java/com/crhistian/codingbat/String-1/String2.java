@@ -29,14 +29,28 @@ public class String2 {
         return conteo;
     }
 
+    public boolean catDog(String str) {
+        String claveA = "cat";
+        String claveB = "dog";
+        int tamanio = str.length();
+        int contadorA=0;
+        int contadorB=0;
 
+        for( int i = 0 ; i < tamanio-2 ; i++ ){
+            String palabra = str.substring(i,i+3);
+            if( palabra.equals(claveA) ){
+                contadorA=contadorA + 1;
+            }
 
+            if( palabra.equals(claveB) ){
+                contadorB= contadorB + 1;
+            }
+        }
 
-
-
-
-
-
-
-
+        if( contadorA==contadorB ){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
