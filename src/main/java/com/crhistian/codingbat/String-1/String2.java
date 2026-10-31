@@ -53,4 +53,17 @@ public class String2 {
             return false;
         }
     }
+
+    public int countCode(String str) {
+        String cadena = "co.e" ;
+        int contador = 0 ;
+
+        for( int i = 0 ; i < str.length()-3; i++ ){
+            String c = str.substring(i,i+4);
+            if( c.matches(cadena) ){
+                contador = contador +1;
+            }
+        }
+        return contador;
+    }
 }
