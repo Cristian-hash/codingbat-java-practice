@@ -66,4 +66,32 @@ public class String2 {
         }
         return contador;
     }
+
+    public boolean endOther(String a, String b) {
+        String palabraPrimera = a.toLowerCase();
+        String palabraSegunda = b.toLowerCase();
+
+        int tamanioPrimera = a.length();
+        int tamanioSegunda = b.length();
+
+        if(tamanioPrimera>tamanioSegunda){
+            String parteFinal = palabraPrimera.substring( tamanioPrimera-tamanioSegunda );
+            if( palabraSegunda.equals(parteFinal) ){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            String parteFinalDos = palabraSegunda.substring( tamanioSegunda-tamanioPrimera );
+            if( palabraPrimera.equals(parteFinalDos) ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+
+
+
+
 }
