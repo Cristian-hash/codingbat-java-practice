@@ -4,7 +4,7 @@ public class String2 {
 
     public String doubleChar(String str) {
         String palabra="";
-        for(int i=0;i<str.length();i++){
+        for(int i = 0;i<str.length();i++){
             String letra = str.substring( i, i+1 );
             palabra = palabra + letra + letra;
         }
@@ -89,6 +89,26 @@ public class String2 {
                 return false;
             }
         }
+    }
+
+    public boolean xyzThere(String str) {
+        String clave = "xyz";
+        int tamanio = str.length();
+
+        for(int  i = 0; i < tamanio ; i++ ){
+            String cadena = str.substring(i,i+3);
+
+            if( cadena.matches(".xyz") ){
+                if(  cadena.substring(i,i+1).equals(".") ){
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                return false ;
+            }
+        }
+
     }
 
 
