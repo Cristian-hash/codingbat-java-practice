@@ -91,24 +91,23 @@ public class String2 {
         }
     }
 
+
     public boolean xyzThere(String str) {
-        String clave = "xyz";
-        int tamanio = str.length();
 
-        for(int  i = 0; i < tamanio ; i++ ){
-            String cadena = str.substring(i,i+3);
+        for (int i = 0; i <= str.length() - 3; i++) {
 
-            if( cadena.matches(".xyz") ){
-                if(  cadena.substring(i,i+1).equals(".") ){
-                    return false;
-                } else {
+            String palabra = str.substring(i, i + 3);
+
+            if (palabra.equals("xyz")) {
+
+                if (i == 0 || str.charAt(i - 1) != '.') {
                     return true;
                 }
-            } else {
-                return false ;
+
             }
         }
 
+        return false;
     }
 
 
