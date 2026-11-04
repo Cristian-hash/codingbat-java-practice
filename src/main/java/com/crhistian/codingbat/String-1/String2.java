@@ -110,7 +110,21 @@ public class String2 {
         return false;
     }
 
+    public boolean bobThere(String str) {
+        int tamanio = str.length();
 
+        if ( tamanio >= 3 ){
+            boolean respuesta = false;
+            for(int i = 0 ;i< tamanio - 2 ; i++ ){
+                String cadena = str.substring(i,i+3);
+                if( cadena.matches("b.b") ){
+                    respuesta = true;
+                }
+            }
 
-
+            return respuesta;
+        }else{
+            return false;
+        }
+    }
 }
