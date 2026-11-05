@@ -127,4 +127,19 @@ public class String2 {
             return false;
         }
     }
+
+    public boolean xyBalance(String str) {
+        int tamanio = str.length();
+
+        int posicionUltimaX = str.lastIndexOf( "x" );
+        int posicionUltimaY = str.lastIndexOf( "y" );
+
+        if( posicionUltimaY > posicionUltimaX || (posicionUltimaX==-1) ){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 }
