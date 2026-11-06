@@ -142,4 +142,42 @@ public class String2 {
 
     }
 
+    public String mixString(String a, String b) {
+        int tamanioA = a.length();
+        int tamanioB = b.length();
+        int menor;
+        int mayor;
+        String cadenaMayor;
+        String cadenaMenor;
+        String resto="";
+
+        String palabraParcial = "";
+        String palabraRetornar  = "";
+
+        if( tamanioA <= tamanioB ){
+            menor = tamanioA ;
+            mayor = tamanioB ;
+            cadenaMenor = a;
+            cadenaMayor = b;
+        }else{
+            menor = tamanioB ;
+            mayor = tamanioA ;
+            cadenaMenor = b;
+            cadenaMayor = a;
+
+        }
+        resto = cadenaMayor.substring( menor);
+
+        for(int i =0 ;i< menor;i++){
+            String primerCaracter = a.substring(i,i+1);
+            String segundoCaracter =b.substring(i,i+1);
+
+            palabraParcial=palabraParcial+primerCaracter+segundoCaracter;
+
+        }
+
+        palabraRetornar = palabraParcial+resto;
+
+        return palabraRetornar;
+    }
 }
