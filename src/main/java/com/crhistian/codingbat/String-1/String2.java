@@ -180,4 +180,22 @@ public class String2 {
 
         return palabraRetornar;
     }
+
+    public String repeatEnd(String str, int n) {
+        int tamanio = str.length();
+        int inicioRespuesta = tamanio - n;
+
+        String palabra ="";
+        String respuestaFinal="";
+        palabra = str.substring(inicioRespuesta);
+
+        for( int i= 0 ; i<n;i++ ){
+            respuestaFinal=respuestaFinal+palabra;
+        }
+
+        return respuestaFinal;
+
+    }
+
+
 }
