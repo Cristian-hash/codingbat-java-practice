@@ -197,5 +197,12 @@ public class String2 {
 
     }
 
-
+    public String repeatFront(String str, int n) {
+        String respuesta = "";
+        while( n > 0 ){
+            respuesta = respuesta + str.substring(0,n);
+            n--;
+        }
+        return respuesta;
+    }
 }
