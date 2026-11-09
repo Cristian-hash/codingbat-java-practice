@@ -205,4 +205,30 @@ public class String2 {
         }
         return respuesta;
     }
+
+    public String repeatSeparator(String word, String sep, int count) {
+
+        String respuesta = "";
+        String previo="";
+
+        int tamanioSep= sep.length();
+        int finCadena;
+
+
+        while( count >0){
+
+            previo = previo+word+sep;
+
+            count--;
+        }
+
+        int tamanioPrev = previo.length();
+        finCadena = tamanioPrev-tamanioSep;
+
+        respuesta = previo.substring(0,finCadena);
+
+        return respuesta;
+
+    }
+
 }
