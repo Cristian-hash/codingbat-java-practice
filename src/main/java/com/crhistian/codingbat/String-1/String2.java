@@ -231,4 +231,21 @@ public class String2 {
 
     }
 
+    public boolean prefixAgain(String str, int n) {
+        String prefijo = str.substring( 0, n);
+        int tamanio = str.length();
+
+        boolean respuesta = false;
+
+        for(  int i = n ; i <=  (tamanio-n) ; i++ ){
+            String parteCadenaAnalizar = str.substring( i,i+n );
+            if ( prefijo.equals(parteCadenaAnalizar) ){
+                respuesta = true;
+            }
+        }
+        return respuesta;
+    }
+
+
+
 }
