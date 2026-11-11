@@ -246,6 +246,42 @@ public class String2 {
         return respuesta;
     }
 
+    public boolean xyzMiddle(String str) {
+//1 cadena xyz esta?
+        String cadenaVerificar = "xyz";
+        boolean cadenaPresente = false ;
+        boolean respuestaGeneral = false;
+        int cadenaLeer = str.length()-3;
 
+        for ( int i = 0 ; i<=cadenaLeer ; i++ ){
+            String palabra = str.substring( i , i+3 );
+            if( palabra.equals ( cadenaVerificar ) ){
+                cadenaPresente = true;
+            }
+        }
+
+//2 verificar que este ma misma cantidad presente
+        if(cadenaPresente===true){
+            while(){
+
+
+
+                if(){
+                    return true;
+                }
+            }
+
+
+        }else{
+            return false;
+        }
+    }
+
+/*
+
+  while(i<cadenaLeer){
+
+  }
+*/
 
 }
