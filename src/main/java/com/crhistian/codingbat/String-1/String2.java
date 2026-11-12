@@ -249,39 +249,24 @@ public class String2 {
     public boolean xyzMiddle(String str) {
 //1 cadena xyz esta?
         String cadenaVerificar = "xyz";
-        boolean cadenaPresente = false ;
-        boolean respuestaGeneral = false;
+        boolean respuesta = false ;
         int cadenaLeer = str.length()-3;
 
-        for ( int i = 0 ; i<=cadenaLeer ; i++ ){
-            String palabra = str.substring( i , i+3 );
-            if( palabra.equals ( cadenaVerificar ) ){
-                cadenaPresente = true;
-            }
-        }
+        for ( int i = 0 ; i <= cadenaLeer ; i++){
+            String palabra = str.substring(i,i+3);
+            if(palabra.equals(cadenaVerificar) ){
+                //calculo de caracteres de ambos lados
+                int caracteresIzq = (str.substring(0,i)).length();
+                int caracteresDer = (str.substring(i+3)).length();
 
-//2 verificar que este ma misma cantidad presente
-        if(cadenaPresente===true){
-            while(){
+                int valor = Math.abs(caracteresIzq-caracteresDer);
 
-
-
-                if(){
-                    return true;
+                if(valor>=0 && valor <=1){
+                    respuesta = true;
                 }
             }
-
-
-        }else{
-            return false;
         }
+        return respuesta;
     }
-
-/*
-
-  while(i<cadenaLeer){
-
-  }
-*/
 
 }
