@@ -269,4 +269,13 @@ public class String2 {
         return respuesta;
     }
 
+    public String getSandwich(String str) {
+        int primero = str.indexOf("bread");
+        int ultimo = str.lastIndexOf("bread");
+        String jam ="";
+        if(primero != -1 && ultimo !=-1 && primero != ultimo){
+            jam = str.substring(primero+5,ultimo);
+        }
+        return jam;
+    }
 }
