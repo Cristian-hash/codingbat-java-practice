@@ -278,4 +278,28 @@ public class String2 {
         }
         return jam;
     }
+
+    public boolean sameStarChar(String str) {
+
+        boolean respuesta = true;
+        int indice = 1;
+        int tamanio = str.length();
+
+        while( indice < tamanio-1 ){
+            // 1. ¿Es un asterisco?
+            if( str.charAt(indice)=='*' ){
+                // 2. Si es asterisco, ¿tiene vecinos?
+                // 3. ¿Los vecinos son iguales?
+                if( str.charAt(indice-1) != str.charAt(indice +1) ){
+                    respuesta = false;
+                }
+
+            }
+            indice++;
+        }
+
+        return respuesta;
+    }
+
+
 }
