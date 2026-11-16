@@ -301,31 +301,37 @@ public class String2 {
         return respuesta;
     }
 
+
     public String oneTwo(String str) {
         //1 retornar la cadena a revisar
         int tamanioCadena = str.length();
         String cadenaCorregida ="";
-        if (tamanioCadena %3 != 0){
+
+        String primerCaracter ="";
+        String segundoCaracter="";
+        String tercerCaracter ="";
+        String grupoTres="";
+
+        String palabra="";
+
+        if ( tamanioCadena %3 != 0){
             int cantidadCaracteresQuitar =  tamanioCadena %3 ;
             cadenaCorregida = str.substring(0,tamanioCadena-cantidadCaracteresQuitar);
         }else {
             cadenaCorregida = str;
         }
-
-        for( int i = 0 ; i < cadenaCorregida.length(); i++ ){
+        for( int i = 0 ; i < cadenaCorregida.length(); i+=3 ){
             // agrupar de a 3
-
-            String palabra="";
-
             if(i%3 == 0){
-                String primerCarater =cadenaCorregida.charAt(i+1,i+2);
-                String segundoCarater =cadenaCorregida.substring(i+2,i+3);
-                String tercerCarater =cadenaCorregida.substring(i,i+1);
+                primerCaracter =cadenaCorregida.substring(i+1,i+2);
+                segundoCaracter =cadenaCorregida.substring(i+2,i+3);
+                tercerCaracter =cadenaCorregida.substring(i,i+1);
+                grupoTres = primerCaracter+segundoCaracter+tercerCaracter;
             }
-            palabra = palabra +primerCarater+segundoCaracter+tercerCaracter;
+
+            palabra = palabra +grupoTres;
         }
 
         return palabra;
     }
-
 }
