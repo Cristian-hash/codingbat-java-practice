@@ -334,4 +334,21 @@ public class String2 {
 
         return palabra;
     }
+
+    public String zipZap(String str) {
+        String z="zp";
+        String palabraRespuesta="";
+
+        for(int i = 0 ; i < str.length(); i++){
+            if( i + 2 < str.length() && str.substring( i , i+1 ).equals( "z" ) && str.substring( i+2,i+3 ).equals( "p" ) ){
+                palabraRespuesta = palabraRespuesta+z;
+                i+=2;
+            }else {
+                palabraRespuesta = palabraRespuesta+str.substring(i,i+1);
+            }
+        }
+        return palabraRespuesta;
+    }
+
+
 }
