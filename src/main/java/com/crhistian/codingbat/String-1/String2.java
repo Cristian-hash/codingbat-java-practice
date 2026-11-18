@@ -350,5 +350,19 @@ public class String2 {
         return palabraRespuesta;
     }
 
+    public String starOut(String str) {
+        // 1ro darle una pasadda y unificar los asteriscos
+        String palabraLimpia="";
+        int tamanio = str.length();
+
+        for( int i = 0 ; i < ( tamanio - 1 ) ; i++ ){
+            if( i == 0 ||
+                    !str.substring( i, i+1 ).equals(str.substring(i - 1, i  )) &&
+                            !str.substring( i, i+1 ).equals("*")  ){
+                palabraLimpia = palabraLimpia + str.substring( i , i + 1 );
+            }
+        }
+        return palabraLimpia;
+    }
 
 }
