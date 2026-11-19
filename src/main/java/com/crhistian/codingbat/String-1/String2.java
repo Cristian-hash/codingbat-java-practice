@@ -355,14 +355,35 @@ public class String2 {
         String palabraLimpia="";
         int tamanio = str.length();
 
-        for( int i = 0 ; i < ( tamanio - 1 ) ; i++ ){
+        for( int i = 0 ; i < ( tamanio) ; i++ ){
             if( i == 0 ||
-                    !str.substring( i, i+1 ).equals(str.substring(i - 1, i  )) &&
-                            !str.substring( i, i+1 ).equals("*")  ){
+                    !str.substring( i, i+1 ).equals(str.substring(i - 1, i  )) ||
+                    !str.substring( i, i+1 ).equals("*")  ){
                 palabraLimpia = palabraLimpia + str.substring( i , i + 1 );
             }
         }
-        return palabraLimpia;
+
+        //return palabraLimpia;
+
+        //2do de la palabra limpia los que estan a lado del asterisco
+        int tamanioLimpio = palabraLimpia.length();
+        String respuesta ="";
+        for(int i = 0;i<tamanioLimpio;i++){
+            if(
+
+                    !palabraLimpia.substring(i,i+1).equals("*") &&
+
+                            (i== tamanioLimpio-1 || !palabraLimpia.substring(i+1,i+2).equals("*") )&&
+
+                            ( i==0 || !palabraLimpia.substring(i-1,i).equals("*") )
+
+            )
+            {
+                respuesta = respuesta + palabraLimpia.substring(i,i+1);
+            }
+        }
+
+        return respuesta;
     }
 
 }
