@@ -389,28 +389,24 @@ public class String2 {
     public String plusOut(String str, String word) {
         int tamanioCadena= str.length();
         int tamanioClave = word.length();
+        String mas ="+";
+        String respuesta="";
+        int i=0;
+        while(i<tamanioCadena){
 
-        for( int i = 0; i < (tamanioCadena-tamanioClave) ; i++ ){
-            String  cadenaExtraida = str.substring( i , i+tamanioClave );
-            String respuesta="";
-            if( cadenaExtraida.equals(word) ){
-                respuesta = respuesta + word;
+            if(i+tamanioClave <= tamanioCadena ){
+                String cadenaExtraida = str.substring( i , i + tamanioClave );
+                if(cadenaExtraida.equals(word)){
+                    respuesta = respuesta + word;
+                    i=i+word.length()-1;
+                }else{
+                    respuesta = respuesta + mas;
+                }
             }else{
-
-
-
-
+                respuesta = respuesta + mas;
             }
+            i++;
         }
+        return respuesta;
     }
-
-
-
-    public String reemplazar(String palabra){
-        //el ifs aca?
-        return reemplazo;
-    }
-
-
-
 }
