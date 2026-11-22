@@ -409,4 +409,22 @@ public class String2 {
         }
         return respuesta;
     }
+
+    public String wordEnds(String str, String word) {
+        //1
+        int tamanioCadena = str.length();
+        int tamanioClave  = word.length();
+
+
+        for( int i = 0 ; i< str.length() ; i++ ){
+            palabraStr = str.length(i,tamanioClave);
+            if( palabraStr.equals(word) ){
+
+            }else{
+
+            }
+        }
+    }
+
+
 }
