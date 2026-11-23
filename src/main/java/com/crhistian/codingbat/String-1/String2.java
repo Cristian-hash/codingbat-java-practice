@@ -414,16 +414,22 @@ public class String2 {
         //1
         int tamanioCadena = str.length();
         int tamanioClave  = word.length();
+        String respuesta ="";
 
-
-        for( int i = 0 ; i< str.length() ; i++ ){
-            palabraStr = str.length(i,tamanioClave);
-            if( palabraStr.equals(word) ){
-
-            }else{
-
+        for( int i = 0 ; i <= tamanioCadena - tamanioClave ; i++ ){
+            String seccionStr = str.substring( i , i + tamanioClave );
+            if( seccionStr.equals( word ) ){
+                if(i>0){
+                    respuesta=respuesta+
+                            str.substring(i-1,i);
+                }
+                if (i + tamanioClave < tamanioCadena) {
+                    respuesta=respuesta+
+                            str.substring(i+tamanioClave,i+tamanioClave+1);
+                }
             }
         }
+        return respuesta;
     }
 
 
