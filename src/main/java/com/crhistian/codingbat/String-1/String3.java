@@ -13,5 +13,24 @@ public class String3 {
         }
         return count;
     }
+    public String withoutString(String base, String remove) {
+        int tamanioBase=base.length();
+        int tamanioRemove=remove.length();
+        int limiteImpresion=tamanioBase-tamanioRemove;
+        String respuesta="";
+        String respuestaFinal="";
+        for(int i = 0 ;i<=limiteImpresion;i++){
+            String cadena = base.substring(i,i+tamanioRemove) ;
+            if( !(cadena.equalsIgnoreCase(remove))   ){
+                respuesta = respuesta+base.substring(i,i+1);
+            }else{
+                respuesta = respuesta+"" ;
+                i=i+tamanioRemove-1;
+            }
+        }
+
+        respuestaFinal=respuesta+base.substring(limiteImpresion+1);
+        return respuestaFinal;
+    }
 
 }
