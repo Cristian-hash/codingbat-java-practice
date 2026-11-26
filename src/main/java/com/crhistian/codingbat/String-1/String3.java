@@ -33,4 +33,29 @@ public class String3 {
         return respuestaFinal;
     }
 
+    public String withoutString(String base, String remove) {
+        int tamanioBase=base.length();
+        int tamanioRemove=remove.length();
+        String respuesta="";
+        int i = 0;
+        while (i < tamanioBase ){
+            if( i +tamanioRemove<=tamanioBase ){
+                String cadena = base.substring(i,i+tamanioRemove) ;
+                if( !(cadena.equalsIgnoreCase(remove))   ){
+                    respuesta = respuesta+base.substring(i,i+1);
+                    i++;
+                }else{
+                    respuesta = respuesta+"" ;
+                    i=i+tamanioRemove;
+                }
+            }else{
+                respuesta = respuesta + base.substring(i);
+                break;
+            }
+        }
+
+        return respuesta;
+    }
+
+
 }
