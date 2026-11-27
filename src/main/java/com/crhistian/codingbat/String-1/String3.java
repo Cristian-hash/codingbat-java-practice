@@ -57,5 +57,33 @@ public class String3 {
         return respuesta;
     }
 
+    public boolean equalIsNot(String str) {
+        int tamanioStr=str.length();
+        int contadorIs=0;
+        int contadorNot=0;
+        boolean respuesta=false;
+        //1 contador de is
+        for ( int i = 0;  i < tamanioStr-1; i++ ){
+            if( str.charAt(i)=='i'){
+                if( str.charAt(i+1)=='s'){
+                    contadorIs++;
+                }
+            }
+        }
+        //2 contador de not
+        for ( int i = 0;  i < tamanioStr-2; i++ ){
+            if( str.charAt(i)=='n'){
+                if( str.charAt(i+1)=='o'){
+                    if( str.charAt(i+2)=='t'){
+                        contadorNot++;
+                    }
+                }
+            }
+        }
 
+        if(contadorIs==contadorNot){
+            respuesta = true;
+        }
+        return respuesta;
+    }
 }
