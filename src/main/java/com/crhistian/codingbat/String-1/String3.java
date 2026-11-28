@@ -86,4 +86,21 @@ public class String3 {
         }
         return respuesta;
     }
+
+    public boolean gHappy(String str) {
+        int tamanioStr = str.length();
+        boolean respuesta = true;
+
+        for( int i = 0 ; i < tamanioStr ; i++  ){
+            if( str.charAt(i) =='g' ){
+                if( !(i>0 && str.charAt( i - 1 )=='g' ||  i<tamanioStr-1 && str.charAt( i + 1 )=='g')  ){
+                    respuesta = false;
+                }
+            }
+        }
+
+        return respuesta;
+    }
+
+
 }
